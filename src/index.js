@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import data from "./api.json";
-import Playlist from "./playlist/components/Playlist";
+import data from "./api.js";
+import Playlist from "./playlist/components/Playlist.js";
 import * as serviceWorker from "./serviceWorker";
+// import Category from "./playlist/components/Category.js";
 
 // ReactDOM.render(WHAT, WHERE);
 ReactDOM.render(<Playlist data={data} />, document.getElementById("root"));

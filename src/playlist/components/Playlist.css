@@ -1,11 +1,17 @@
 .Playlist {
-  overflow-x: auto;
+  overflow-x: scroll;
   /*width: 500px;*/
   white-space: nowrap;
   /*display: flex;*/
   /*flex-wrap: wrap;*/
-  /*height: 500px;*/
-  /*background: red;*/
+}
+
+.parent-container {
+  display: grid;
+  grid-template-columns: repeat(5, 260px);
+  grid-column-gap: 10px;
+  height: 160px;
   overflow-y: hidden;
   padding-bottom: 80px;
+  scroll-behavior: auto;
 }

@@ -1,15 +1,24 @@
 import React, { Component } from "react";
 import Media from "./Media.js";
 import "./Playlist.css";
+import Category from "./Category.js";
 
 class Playlist extends Component {
   render() {
-    const playlist = this.props.data.categories[0].playlist;
-
+    const category = this.props.data.categories;
     return (
       <div>
-        {playlist.map(item => {
-          return <Media {...item} key={item.id} />;
+        {category.map(item => {
+          return (
+            <div>
+              <Category {...item} key={item.id} />
+              <div className="parent-container">
+                {item.playlist.map(item => {
+                  return <Media {...item} key={item.id} />;
+                })}
+              </div>
+            </div>
+          );
         })}
       </div>
     );
